@@ -1,103 +1,88 @@
-import Image from "next/image";
+import Hello from "@/components/Hello";
+import { Geist, Geist_Mono, Roboto_Mono, DM_Sans, Poppins } from "next/font/google";
+import Details from "@/components/Details";
+import Facts from "@/components/Facts";
+
+const robotoMono = Roboto_Mono({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
+const geistSans = Geist({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
+const facts = [
+  "The first website launched in 1991.",
+  "Octopuses have three hearts and blue blood.",
+  "The moon experiences small moonquakes regularly.",
+  "Email was invented back in 1971.",
+  "Strawberries aren't berries, but bananas are.",
+  "Lightning is five times hotter than sun.",
+  "The Eiffel Tower grows in summer heat.",
+  "Ants never sleep throughout their lives.",
+  "Honey stays good forever without expiring.",
+  "Sharks existed millions of years before trees.",
+  "Venus spins slower than it orbits sun.",
+  "Wombats produce perfectly cube-shaped poop.",
+  "Humans share DNA with bananas (60%).",
+  "Sloths hold breath longer than dolphins.",
+  "A sneeze can exceed 100 miles/hour.",
+  "More stars exist than grains of sand.",
+  "Octopuses have nine brains, three hearts too.",
+  "Cows have best friends and get stressed.",
+  "Scotland’s national animal is a unicorn.",
+  "Tigers’ skin is striped, not just fur.",
+  "Cats can be allergic to humans too.",
+  "The dot on 'i' is a tittle.",
+  "Fake flamingos outnumber real ones worldwide.",
+  "First computer mouse was made of wood.",
+  "Group of flamingos is called flamboyance.",
+  "Snails can sleep for three whole years.",
+  "Some jellyfish can technically live forever.",
+  "You can't hum while holding your nose.",
+  "Butterflies can taste with their feet.",
+  "A jiffy equals 1/100th of a second.",
+  "Rain contains vitamin B12 naturally occurring."
+];
+
+
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+  return (
+    <div className="w-[90%] sm:w-[60%] lg:w-[65%] xl:w-[48%] relative border-x border-[#202020] flex flex-col items-center justify-center space-y-6">
+
+      <Hello />
+
+      {/* <p className={`${robotoMono.className} text-gray-400 text-center text-sm px-6 md:w-[800px]`}>
+        Hey! I'm a full-stack developer who loves turning ideas into clean, functional code. From slick frontends to solid backends, I build stuff that works and looks good. I level up through lines of code and battle bugs daily.
+      </p> */}
+
+      <Details />
+
+
+      <div className="flex items-center justify-center absolute bottom-2 w-full border-t border-[#202020]">
+        <Facts/>
+      </div>
+
     </div>
+
   );
 }
