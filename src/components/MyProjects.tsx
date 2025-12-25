@@ -59,7 +59,7 @@ function MyProjects() {
                                 </Link>
                             </div>
                             <div className='flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-1 border-y border-[#202020]'>
-                                <Image src={project.image} alt="project-image" className='w-full border-b md:border-r border-[#202020] md:w-[280px]' />
+                                <Image src={project.image} alt="project-image" width={280} height={100} className='w-full border-b md:border-r border-[#202020] md:w-[280px]' />
                                 <p className='text-sm border-t border-[#202020] text-center md:text-start text-gray-400'>
                                     {language === "en" ? project.description.en : project.description.hi}
                                 </p>

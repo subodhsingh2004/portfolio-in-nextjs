@@ -9,7 +9,7 @@ import { useStore } from '@/store/useStore'
 
 const robotoMono = Roboto_Mono({
     subsets: ['latin'],
-    weight: ['400', '500'],
+    weight: ['400', '700'],
 })
 
 interface NavItem {
@@ -67,7 +67,7 @@ function Navbar() {
                             pathName == "/" ?
                                 <motion.li
                                     key={index}
-                                    className={`${isActive ? "text-blue-600 font-medium" : "text-white"} ${language == "hi" ? "text-[16px]]" : "text-sm"} md:text-[16px]`}
+                                    className={`${isActive ? "text-blue-600" : "text-white"} ${language == "hi" ? "text-[16px]]" : "text-sm"} md:text-[16px] font-bold`}
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: .25, delay: delay, ease: 'easeInOut' }}
@@ -79,7 +79,7 @@ function Navbar() {
 
                                 <li
                                     key={index}
-                                    className={`${isActive ? "text-blue-600 font-medium" : "text-white"} ${language == "hi" ? "text-[16px]]" : "text-sm"} md:text-[16px]`}
+                                    className={`${isActive ? "text-blue-600" : "text-white"} ${language == "hi" ? "text-[16px]]" : "text-sm"} md:text-[16px] font-bold`}
                                 >
                                     <Link href={item.path}>
                                         {label}

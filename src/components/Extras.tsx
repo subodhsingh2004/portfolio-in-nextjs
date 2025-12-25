@@ -126,10 +126,10 @@ function Extras() {
             </div>
 
             {/* last updated section */}
-            <div className='w-full bottom-0 absolute py-2 text-center border-y border-[#202020]'>
+            <div className='w-full bottom-0 absolute py-2 text-center border-t border-[#202020]'>
                 <span className='text-xs text-gray-400'>
                     {
-                        language == "en" ? "Last updated at 19 NOV" : "अखिरी बार 19 नवंबर को अपडेट किया गया"
+                        language == "en" ? "Last updated at 25 DEC" : "अखिरी बार 25 दिसंबर को अपडेट किया गया"
                     }
                 </span>
             </div>

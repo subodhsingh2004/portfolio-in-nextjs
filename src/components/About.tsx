@@ -39,7 +39,7 @@ function About() {
             {
               skills.map((skill, index) => (
                 skill == "|" ? null :
-                  <span key={index} className={`${geistMono.className} text-sm text-gray-300`}>
+                  <span key={index} className={`${geistMono.className} text-sm text-gray-400`}>
                     {skill.toUpperCase() + ", "}
                   </span>
               ))
