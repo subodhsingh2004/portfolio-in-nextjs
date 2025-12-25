@@ -1,8 +1,7 @@
 "use client"
 
-import React, { useState } from 'react'
+import React from 'react'
 import { Geist_Mono } from 'next/font/google';
-import { motion } from 'framer-motion'
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import TranslateIcon from '@mui/icons-material/Translate';
 import { useStore } from '@/store/useStore';
@@ -59,7 +58,7 @@ function Extras() {
             {gameOneBoxVisibility && <Game />}
 
 
-            <h2 className={`border-y border-[#202020] text-[20px] lg:text-[22px] text-transparent bg-clip-text bg-gradient-to-b from-gray-500 to-gray-200 font-semibold`}>
+            <h2 className={`border-y border-[#202020] text-[20px] lg:text-[22px] text-transparent bg-clip-text bg-linear-to-b from-gray-500 to-gray-200 font-semibold`}>
                 {greetings[language][getTimeOfDay()]}
             </h2>
 

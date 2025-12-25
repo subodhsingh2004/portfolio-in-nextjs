@@ -23,7 +23,7 @@ function Details() {
                     <p
                         className={`${robotoMono.className} text-gray-400 leading-6 sm:leading-6 tracking-tighter text-center text-sm md:text-[16px] select-none cursor-text`}
                     >
-                        I'm <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-400">Subodh Singh</span> a full-stack developer who loves turning ideas
+                        I &apos;sm <span className="bg-clip-text text-transparent bg-linear-to-r from-blue-600 to-blue-400">Subodh Singh</span> a full-stack developer who loves turning ideas
                         <motion.span
                             animate={{
                                 scale: [1, 1.2, 1],

@@ -29,18 +29,18 @@ function Game() {
 
         // check winner
         if (selectedMove === computerMove) {
-            language === "en" ? setStatus("draw") : setStatus("बराबरी")
+            language == "en" ? setStatus("draw") : setStatus("बराबरी")
         }
         else if (
             (selectedMove === "rock" && computerMove === "scissors") ||
             (selectedMove === "paper" && computerMove === "rock") ||
             (selectedMove === "scissors" && computerMove === "paper")
         ) {
-            language === "en" ? setStatus("win") : setStatus("जीत")
+            language == "en" ? setStatus("win") : setStatus("जीत")
             setMyScore(prev => prev + 1)
             setComputerScore(prev => prev - 1)
         } else {
-            language === "en" ? setStatus("lose") : setStatus("हार")
+            language == "en" ? setStatus("lose") : setStatus("हार")
             setMyScore(prev => prev - 1)
             setComputerScore(prev => prev + 1)
         }
@@ -52,7 +52,7 @@ function Game() {
             <div className='min-w-[320px] sm:w-[450px] h-[450px] bg-black flex flex-col items-center relative gap-10'>
 
                 <div className='p-3 border-b border-[#202020] w-full flex justify-center items-center'>
-                    <h2 className='text-lg text-transparent bg-clip-text bg-gradient-to-b from-gray-500 to-gray-200 font-semibold'>
+                    <h2 className='text-lg text-transparent bg-clip-text bg-linear-to-b from-gray-500 to-gray-200 font-semibold'>
                         {
                             language == "en" ? "ROCK · PAPER · SCISSORS" :
                                 "पत्थर · कागज · कैंची"

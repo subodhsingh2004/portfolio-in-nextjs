@@ -4,6 +4,7 @@ import { Geist_Mono } from 'next/font/google'
 import { motion } from 'framer-motion'
 import { useStore } from '@/store/useStore'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const geistMono = Geist_Mono({
     subsets: ["latin"],
@@ -54,11 +55,11 @@ function MyProjects() {
                                     <span className='text-xs text-gray-500'>{project.techStack}</span>
                                 </div>
                                 <Link href={project.link}>
-                                    <img src="/arrow.png" alt="" className='w-5' />
+                                    <Image src={"/arrow.png"} width={20} height={20} alt='arrow' />
                                 </Link>
                             </div>
                             <div className='flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-1 border-y border-[#202020]'>
-                                <img src={project.image} alt="" className='w-full border-b md:border-r border-[#202020] md:w-[280px]' />
+                                <Image src={project.image} alt="project-image" className='w-full border-b md:border-r border-[#202020] md:w-[280px]' />
                                 <p className='text-sm border-t border-[#202020] text-center md:text-start text-gray-400'>
                                     {language === "en" ? project.description.en : project.description.hi}
                                 </p>

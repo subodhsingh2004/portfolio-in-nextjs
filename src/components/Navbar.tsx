@@ -12,11 +12,6 @@ const robotoMono = Roboto_Mono({
     weight: ['400', '500'],
 })
 
-const geistMono = Geist_Mono({
-    subsets: ['latin'],
-    weight: ['400', '500'],
-})
-
 interface NavItem {
     path: string
     labels: Record<"en" | "hi", string>
@@ -64,7 +59,7 @@ function Navbar() {
             <ul className='flex w-[90%] h-full sm:w-[60%] lg:w-[65%] xl:w-[48%] backdrop-blur-md bg-black/30 shadow-md items-center justify-center space-x-8 sm:space-x-10 border-x border-b border-[#202020]'>
                 {
                     navItems.map((item, index) => {
-                        let label = item.labels[language]
+                        const label = item.labels[language]
                         const isActive = item.path == pathName
                         const delay = pathName == "/" ? 1 + (index * 0.25) : 0
 
