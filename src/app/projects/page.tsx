@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 function page() {
     return (
 
-        <div className="w-[90%] sm:w-[60%] lg:w-[65%] xl:w-[48%] border-x border-[#202020] flex flex-col items-center justify-center space-y-6 pt-[100px] lg:p-0 pb-[80px]">
+        <div className="w-[90%] sm:w-[60%] lg:w-[65%] xl:w-[48%] border-x border-[#202020] flex flex-col items-center justify-center space-y-6 pt-[100px] lg:p-0 pb-20">
 
             <MyProjects />
 

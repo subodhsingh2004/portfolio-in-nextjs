@@ -8,6 +8,7 @@ import TranslateIcon from '@mui/icons-material/Translate';
 import { useStore } from '@/store/useStore';
 import { LinkedIn, X } from '@mui/icons-material';
 import Game from './Game';
+import Link from 'next/link';
 
 const geistMono = Geist_Mono({
     subsets: ["latin"],
@@ -115,9 +116,13 @@ function Extras() {
                 </p>
                 <div className='pt-4 gap-2 flex items-center justify-center text-gray-400'>
 
+                    <Link href={"https://x.com/SubodhSingh05"}>
                     <X sx={{ fontSize: 20, cursor: 'pointer' }} />
+                    </Link>
 
+                    <Link href={"https://www.linkedin.com/in/subodh-singh05"}>
                     <LinkedIn sx={{ fontSize: 24, cursor: 'pointer' }} />
+                    </Link>
                 </div>
             </div>
 
